@@ -1,14 +1,14 @@
-{% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}
-# After you create the Github repo and add it to Travis, run the
-# travis_pypi_setup.py script to finish PyPI deployment setup
-deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: {{ cookiecutter.pypi_username }}
-  password:
-    secure: PLEASE_REPLACE_ME
-  on:
-    tags: true
-    repo: {{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-    condition: $TOXENV == py35 -a $TOXENV == py27
-{%- endif %}
+#!/usr/bin/env python
+
+import os
+
+PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
+
+
+def remove_file(filepath):
+    os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
+
+
+if __name__ == '__main__':
+    if '{{ cookiecutter.use_pypi_deployment_with_travis }}' != 'y':
+        remove_file('travis_pypi_setup.py')
