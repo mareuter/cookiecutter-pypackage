@@ -1,20 +1,3 @@
-# Config file for automatic testing at travis-ci.org
-
-language: python
-
-python:
-  - "3.5"
-  - "2.7"
-  - "pypy"
-
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
-install: 
-  - pip install -r requirements.txt
-
-# command to run tests, e.g. python setup.py test
-script:
-  - py.test
-
 {% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}
 # After you create the Github repo and add it to Travis, run the
 # travis_pypi_setup.py script to finish PyPI deployment setup
