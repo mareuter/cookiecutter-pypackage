@@ -10,5 +10,5 @@ deploy:
   on:
     tags: true
     repo: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-    condition: $TOXENV == py27
+    condition: $TOXENV == py35 -a $TOXENV == py27
 {%- endif %}
