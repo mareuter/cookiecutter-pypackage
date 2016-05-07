@@ -9,6 +9,6 @@ deploy:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+    repo: {{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
     condition: $TOXENV == py35 -a $TOXENV == py27
 {%- endif %}
