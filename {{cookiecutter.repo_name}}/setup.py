@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import pip
+from pip.req import parse_requirements
 import os
 import sys
 
@@ -21,6 +23,19 @@ Documentation
 The full documentation is at http://{{ cookiecutter.repo_name }}.rtfd.org."""
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
+parsed_requirements = parse_requirements(
+    'requirements/prod.txt',
+    session=pip.download.PipSession()
+)
+
+parsed_test_requirements = parse_requirements(
+    'requirements/dev.txt',
+    session=pip.download.PipSession()
+)
+
+requirements = [str(ir.req) for ir in parsed_requirements]
+test_requirements = [str(tr.req) for tr in parsed_test_requirements]
+
 setup(
     name='{{ cookiecutter.repo_name }}',
     version='{{ cookiecutter.version }}',
@@ -34,8 +49,7 @@ setup(
     ],
     package_dir={'{{ cookiecutter.repo_name }}': '{{ cookiecutter.repo_name }}'},
     include_package_data=True,
-    install_requires=[
-    ],
+    install_requires=requirements,
     license='MIT',
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
@@ -51,4 +65,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
+    test_suite='tests',
+    tests_require=test_requirements
+
 )
