@@ -5,8 +5,9 @@
 	"project_name": "Python Package of the Day",
 	"repo_name": "ppod",
 	"project_short_description": "Yet another Python package that I want to make.",
-	"release_date": "2016-01-01",
-	"year": "2016",
+	"release_date": "{% now 'local' %}",
+	"pypi_username": "{{ cookiecutter.github_username }}",
+	"year": "{{ cookiecutter.release_date[:4] }}",
 	"version": "0.1.0",
 	"use_pypi_deployment_with_travis": "y"
 }
