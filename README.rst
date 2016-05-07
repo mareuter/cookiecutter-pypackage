@@ -36,7 +36,7 @@ Don't worry, you have options:
 Similar Cookiecutter Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* `Nekroze/cookiecutter-pypackage_`: This repo is fork from here.
+* `Nekroze/cookiecutter-pypackage`_: This repo is fork from here.
 * `audreyr/cookiecutter-pypackage`_: The original pypackage, uses unittest
 for testing and other minor changes.
 
