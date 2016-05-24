@@ -36,12 +36,14 @@ script: tox
 # travis_pypi_setup.py script to finish PyPI deployment setup
 deploy:
   provider: pypi
+  skip_cleanup: true
   distributions: sdist bdist_wheel
   user: {{ cookiecutter.pypi_username }}
   password:
     secure: PLEASE_REPLACE_ME
   on:
+    branch: master
     tags: true
     repo: {{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
-    condition: $TOXENV == py35 && $TOXENV == py27
+    condition: $TOXENV == py35
 {%- endif %}
