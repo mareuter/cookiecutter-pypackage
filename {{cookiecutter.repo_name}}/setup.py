@@ -1,7 +1,4 @@
 #!/usr/bin/env python
-
-import pip
-from pip.req import parse_requirements
 import os
 import sys
 
@@ -23,18 +20,17 @@ Documentation
 The full documentation is at http://{{ cookiecutter.repo_name }}.rtfd.org."""
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
-parsed_requirements = parse_requirements(
-    'requirements/prod.txt',
-    session=pip.download.PipSession()
-)
-
-parsed_test_requirements = parse_requirements(
-    'requirements/dev.txt',
-    session=pip.download.PipSession()
-)
-
-requirements = [str(ir.req) for ir in parsed_requirements]
-test_requirements = [str(tr.req) for tr in parsed_test_requirements]
+requirements = []
+test_requirements = [
+    "wheel>=0.22",
+    "bumpversion",
+    "flake8",
+    "tox",
+    "coverage",
+    "Sphinx",
+    "cryptography",
+    "PyYAML"
+]
 
 setup(
     name='{{ cookiecutter.repo_name }}',
