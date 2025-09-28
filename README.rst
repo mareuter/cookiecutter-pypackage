@@ -4,12 +4,12 @@ cookiecutter-pypackage
 
 Cookiecutter template for a Python package. See https://github.com/mareuter/cookiecutter.
 
-* Free software: MIT license
+* Free software: BSD license
 * Uses a tests directory
-* Separate requirements files
+* Uses pyproject.toml
 * Pytest_ runner: Supports `unittest`, `pytest`, `nose` style tests and more
 * Travis-CI_: Ready for Travis Continuous integration testing and version deployment
-* Tox_ testing: Setup to easily test for python 2.7, 3.5 and PyPy_
+* Tox_ testing: Setup to easily test for python
 * Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
 * Wheel_ support: Use the newest python package distribution standard from the get go
 
@@ -23,44 +23,17 @@ Generate a Python package project::
 Then:
 
 * Create a repo and put it there.
-* Add the repo to your Travis CI account.
 * Add the repo to your ReadTheDocs account + turn on the ReadTheDocs service hook.
 * Run `tox` to make sure all tests pass.
 * Release your package the standard Python way.
 
-Not Exactly What You Want?
---------------------------
+This repository was originally forked from this one and inspired by it.
 
-Don't worry, you have options:
+* `Nekroze/cookiecutter-pypackage`_: This repo was fork from here.
 
-Similar Cookiecutter Templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-* `Nekroze/cookiecutter-pypackage`_: This repo is fork from here.
-* `audreyr/cookiecutter-pypackage`_: The original pypackage, uses unittest
-for testing and other minor changes.
-
-Fork This
-~~~~~~~~~
-
-If you have differences in your preferred setup, I encourage you to fork this
-to create your own version. Once you have your fork working, add it to the
-Similar Cookiecutter Templates list with a brief explanation. It's up to you
-whether or not to rename your fork.
-
-Or Submit a Pull Request
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-I also accept pull requests on this, if they're small, atomic, and if they
-make my own packaging experience better.
-
-
-.. _Travis-CI: http://travis-ci.org/
 .. _Tox: http://testrun.org/tox/
 .. _Sphinx: http://sphinx-doc.org/
 .. _ReadTheDocs: https://readthedocs.org/
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _`Nekroze/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
 .. _Pytest: http://pytest.org/
-.. _PyPy: http://pypy.org/
 .. _Wheel: http://pythonwheels.com
