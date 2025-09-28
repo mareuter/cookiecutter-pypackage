@@ -16,6 +16,7 @@ Contents:
    contributing
    authors
    history
+   api/{{ cookiecutter.package_name }}
 
 Feedback
 ========

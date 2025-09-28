@@ -2,7 +2,7 @@
 cookiecutter-pypackage
 ======================
 
-Cookiecutter template for a Python package. See https://github.com/mareuter/cookiecutter.
+Cookiecutter template for a Python package. See https://github.com/mareuter/cookiecutter-pypackage.
 
 * Free software: BSD license
 * Uses a tests directory
