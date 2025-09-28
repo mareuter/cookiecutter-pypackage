@@ -48,7 +48,7 @@ coverage:
 	open htmlcov/index.html
 
 docs: clean-docs
-	sphinx-apidoc -fMeT -o docs/api src/{{ cookiecutter.package_name }}
+	sphinx-apidoc -fMeT -o docs/api src/{{ cookiecutter.project_slug }}
 	$(MAKE) -C docs html
 
 docs-local: docs

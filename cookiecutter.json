@@ -3,12 +3,11 @@
 	"email": "mareuternh@gmail.com",
 	"github_username": "mareuter",
 	"project_name": "Python Package of the Day",
-	"repo_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
-	"package_name": "{{ cookiecutter.project_slug|replace('-', '') }}",
+	"package_name": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+	"project_slug": "{{ cookiecutter.package_name|replace('-', '') }}",
 	"project_short_description": "Yet another Python package that I want to make.",
 	"release_date": "{% now 'local' %}",
 	"pypi_username": "{{ cookiecutter.github_username }}",
 	"year": "{{ cookiecutter.release_date[:4] }}",
-	"version": "0.1.0",
 	"use_renovate": "y"
 }

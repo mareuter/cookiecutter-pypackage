@@ -11,7 +11,7 @@ __author__ = '{{ cookiecutter.full_name }}'
 __email__ = '{{ cookiecutter.email }}'
 
 try:
-    __version__ = version("{{ cookiecutter.package_name }}")
+    __version__ = version("{{ cookiecutter.project_slug }}")
 except PackageNotFoundError:
     # package is not installed
     __version__ = "0.0.0"

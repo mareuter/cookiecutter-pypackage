@@ -8,7 +8,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 dynamic = ["version"]
-name = "{{ cookiecutter.repo_name }}"
+name = "{{ cookiecutter.package_name }}"
 authors = [
     {name = "{{ cookiecutter.full_name }}", email = "{{ cookiecutter.email }}"}
 ]
@@ -26,12 +26,12 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "http://{{ cookiecutter.repo_name }}.readthedocs.io"
-Repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}"
+Documentation = "http://{{ cookiecutter.package_name }}.readthedocs.io"
+Repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}"
 
 [project.optional-dependencies]
 dev = [
-    "{{ cookiecutter.package_name }}[build,docs,lint,test]",
+    "{{ cookiecutter.project_slug }}[build,docs,lint,test]",
     "scriv",
     "tox"
 ]
@@ -73,7 +73,7 @@ lint.select = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"src/{{ cookiecutter.package_name }}/__init__.py" = [
+"src/{{ cookiecutter.project_slug }}/__init__.py" = [
     "E402",
     "F401",
     "F403"

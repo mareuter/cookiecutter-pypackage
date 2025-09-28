@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues.
+Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}/issues.
 
 If you are reporting a bug, please include:
 
@@ -43,7 +43,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/issues.
+The best way to send feedback is to file an issue at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}/issues.
 
 If you are proposing a feature:
 
@@ -55,13 +55,13 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for
+Ready to contribute? Here's how to set up `{{ cookiecutter.package_name }}` for
 local development.
 
-1. Fork the `{{ cookiecutter.repo_name }}` repo on GitHub.
+1. Fork the `{{ cookiecutter.package_name }}` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/{{ cookiecutter.repo_name }}.git
+    $ git clone git@github.com:your_name_here/{{ cookiecutter.package_name }}.git
 
 3. Create a branch for local development::
 
@@ -94,7 +94,7 @@ Before you submit a pull request, check that it meets these guidelines:
    function with a docstring. Run ``scriv create`` to add a changelog fragment and fill out the appropriate section for the change. Add that to the commits for the pull request.
 #. The pull request should work for the supported range of Python versions.
    The pull request will run GitHub actions to perform those checks.
-   Check https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/pulls
+   Check https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.package_name }}/pulls
    for active pull requests and make sure that the checks all passed.
 
 
@@ -103,4 +103,4 @@ Tips
 
 To run a subset of tests::
 
-	 $ pytest test/test_{{ cookiecutter.package_name }}.py
+	 $ pytest test/test_{{ cookiecutter.project_slug }}.py
