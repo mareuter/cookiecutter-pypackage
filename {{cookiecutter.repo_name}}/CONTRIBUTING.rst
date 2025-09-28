@@ -3,7 +3,7 @@ Contributing
 ============
 
 Contributions are welcome, and they are greatly appreciated! Every
-little bit helps, and credit will always be given. 
+little bit helps, and credit will always be given.
 
 You can contribute in many ways:
 
@@ -36,7 +36,7 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-{{ cookiecutter.project_name }} could always use more documentation, whether as part of the 
+{{ cookiecutter.project_name }} could always use more documentation, whether as part of the
 official {{ cookiecutter.project_name }} docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
@@ -89,14 +89,13 @@ Pull Request Guidelines
 
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put
-   your new functionality into a function with a docstring, and add the
-   feature to the list in README.rst.
-3. The pull request should work for Python 2.7, and 3.5, and for PyPy.
-   Check https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }} 
-   under pull requests for active pull requests or run the ``tox`` command and
-   make sure that the tests pass for all supported Python versions.
+#. The pull request should include tests.
+#. If the pull request adds functionality, put your new functionality into a
+   function with a docstring. Run ``scriv create`` to add a changelog fragment and fill out the appropriate section for the change. Add that to the commits for the pull request.
+#. The pull request should work for the supported range of Python versions.
+   The pull request will run GitHub actions to perform those checks.
+   Check https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}/pulls
+   for active pull requests and make sure that the checks all passed.
 
 
 Tips
@@ -104,4 +103,4 @@ Tips
 
 To run a subset of tests::
 
-	 $ py.test test/test_{{ cookiecutter.repo_name }}.py
+	 $ pytest test/test_{{ cookiecutter.package_name }}.py
