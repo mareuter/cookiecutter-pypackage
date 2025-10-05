@@ -41,4 +41,5 @@ output/*/index.html
 
 # Sphinx
 docs/_build
+docs/api
 docs/modules.rst

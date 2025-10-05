@@ -7,8 +7,8 @@ __all__ = [
 
 from importlib.metadata import PackageNotFoundError, version
 
-__author__ = '{{ cookiecutter.full_name }}'
-__email__ = '{{ cookiecutter.email }}'
+__author__ = "{{ cookiecutter.full_name }}"
+__email__ = "{{ cookiecutter.email }}"
 
 try:
     __version__ = version("{{ cookiecutter.project_slug }}")
@@ -21,3 +21,5 @@ version_info = __version__.split(".")
 
 Use this for version comparison.
 """
+
+from .{{ cookiecutter.project_slug }} import *

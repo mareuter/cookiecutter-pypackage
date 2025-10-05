@@ -1,19 +1,14 @@
-"""
-Tests for `{{ cookiecutter.project_slug }}` module.
-"""
-import pytest
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug|capitalize }}
+"""Tests for `{{ cookiecutter.project_slug }}` module."""
 
 
-class Test{{ cookiecutter.project_slug|capitalize }}:
-
+class Test{{ cookiecutter.project_name|replace(' ', '') }}:
     @classmethod
-    def setup_class(cls):
+    def setup_class(cls) -> None:
         pass
 
-    def test_something(self):
+    def test_something(self) -> None:
         pass
 
     @classmethod
-    def teardown_class(cls):
+    def teardown_class(cls) -> None:
         pass

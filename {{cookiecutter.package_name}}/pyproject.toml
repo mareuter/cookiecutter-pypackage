@@ -14,10 +14,10 @@ authors = [
 ]
 description = "{{ cookiecutter.project_short_description }}"
 readme = "README.rst"
+license = "BSD-3-Clause"
 classifiers = [
     "Development Status :: 1 - Planning",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: BSD License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
@@ -31,7 +31,7 @@ Repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecut
 
 [project.optional-dependencies]
 dev = [
-    "{{ cookiecutter.project_slug }}[build,docs,lint,test]",
+    "{{ cookiecutter.package_name }}[build,docs,lint,test]",
     "scriv",
     "tox"
 ]
